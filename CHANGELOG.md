@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/davidspek/semantic-release-helm/compare/v1.0.0...v1.1.0) (2024-11-25)
+
+
+### Features
+
+* enable using default docker credentials for oci registry ([724b341](https://github.com/davidspek/semantic-release-helm/commit/724b341297c50d38413b0c43dec43cf6ff38ff41))
+
 # 1.0.0 (2024-11-25)
 
 
