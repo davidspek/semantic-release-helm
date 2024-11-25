@@ -1,5 +1,5 @@
 {
-  "name": "@pubgcorp/semantic-release-helm",
+  "name": "@davidspekorg/semantic-release-helm",
   "version": "1.4.4",
   "description": "Helm plugin for [semantic-release](https://github.com/semantic-release/semantic-release)",
   "type": "module",
