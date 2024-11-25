@@ -21,10 +21,12 @@ export async function publish(pluginConfig: InputPluginConfig, context: PublishC
 async function publishChartToOCIRegistry(chartDirectory: string, registry: string, name: string, version: string): Promise<void> {
     const registryUrl = `oci://${registry}`;
     const inferredFileName = `${name}-${version}.tgz`;
+    await execa("helm", ["dependency", "build", chartDirectory]);
     await execa("helm", ["package", chartDirectory]);
     await execa("helm", ["push", inferredFileName, registryUrl]);
 }
 
 async function publishChartToChartRepository(chartDirectory: string) {
+    await execa("helm", ["dependency", "build", chartDirectory]);
     await execa("helm", ["cm-push", chartDirectory, "semantic-release-helm"]);
 }
