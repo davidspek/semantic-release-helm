@@ -11,7 +11,7 @@ It supports the following protocols:
 ## Install
 
 ```
-npm install -D @pubgcorp/semantic-release-helm
+npm install -D @davidspekorg/semantic-release-helm
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ export HELM_REGISTRY_PASSWORD=<PASSWORD>
 
 `HELM_REGISTRY_USERNAME` and `HELM_REGISTRY_PASSWORD` are used for OCI registry login.
 
-If you are using oci registry and no credentials are provided, it will use the `HELM_REPOSITORY_USERNAME` and `HELM_REPOSITORY_PASSWORD` for login. 
+If you are using oci registry and no credentials are provided, it will use the `HELM_REPOSITORY_USERNAME` and `HELM_REPOSITORY_PASSWORD` for login.
 
 ### About versionUpdatePolicy & appVersionUpdatePolicy
 
@@ -55,7 +55,7 @@ Update policy
 {
   "plugins": [
     [
-      "@pubgcorp/semantic-release-helm",
+      "@davidspekorg/semantic-release-helm",
       {
         "chartRepository": "https://mychart.company.org/chartrepo/myproject",
         "ociRegistry": "mychart.company.org/myproject",
@@ -103,4 +103,3 @@ New version - Case #3 major
 version: 2.0.0
 appVersion: 2.3.1
 ```
-

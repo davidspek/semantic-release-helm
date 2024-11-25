@@ -1,5 +1,4 @@
 [bugtraq "GITHUB"]
-	url = https://github.com/pubg/semantic-release-helm/pull/%BUGID%
+	url = https://github.com/davidspek/semantic-release-helm/pull/%BUGID%
 	loglinkregex = "#\\d+"
 	logregex = \\d+
-

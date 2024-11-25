@@ -3,5 +3,4 @@
 # (note that '\' need to be escaped).
 [issuetracker "Krafton GitHub Enterprise Rule"]
   regex = "#(\\d+)"
-  url = "https://github.com/pubg/semantic-release-helm/issues/$1"
-
+  url = "https://github.com/davidspek/semantic-release-helm/issues/$1"
