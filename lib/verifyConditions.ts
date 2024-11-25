@@ -58,6 +58,9 @@ async function verifyChartRepository(repository: string, username: string, passw
 }
 
 async function verifyOCIRegistry(repository: string, username: string, password: string) {
+    if (username === "" || password === "") {
+        return;
+    }
     await loginOCIRegistry(repository, username, password);
 }
 
@@ -75,10 +78,10 @@ function resolveOCIRegistryCredentials(context: VerifyConditionsContext): BasicA
         };
     }
 
-    context.logger.log("Environment variables HELM_REGISTRY_USERNAME and HELM_REGISTRY_PASSWORD are not set. fallback to use HELM_REPOSITORY_USERNAME and HELM_REPOSITORY_PASSWORD.");
+    context.logger.log("Environment variables HELM_REGISTRY_USERNAME and HELM_REGISTRY_PASSWORD are not set. fallback to using docker defaults.");
 
     // fallback to resolve repository credentials
-    return resolveChartRepositoryCredentials(context);
+    return {username: "", password: ""};
 }
 
 function resolveChartRepositoryCredentials(context: VerifyConditionsContext): BasicAuth {
