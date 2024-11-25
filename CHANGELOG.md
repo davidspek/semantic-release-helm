@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/davidspek/semantic-release-helm/compare/v1.1.0...v1.1.1) (2024-11-25)
+
+
+### Bug Fixes
+
+* add helm dependency build before packaging ([44ca4f7](https://github.com/davidspek/semantic-release-helm/commit/44ca4f716d5490914eada2ad455c0e50578cb1ae))
+
 # [1.1.0](https://github.com/davidspek/semantic-release-helm/compare/v1.0.0...v1.1.0) (2024-11-25)
 
 
