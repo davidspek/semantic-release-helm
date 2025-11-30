@@ -41,7 +41,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "execa": "^4.1.0",
+    "execa": "^9.0.0",
     "js-yaml": "^4.1.0",
     "semver": "^7.6.2",
     "typia": "^6.0.6"
