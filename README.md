@@ -14,6 +14,12 @@ It supports the following protocols:
 npm install -D @pubgcorp/semantic-release-helm
 ```
 
+Runtime requirements:
+
+- Node.js `>=20.8.1`
+- semantic-release `>=24 <26`
+- Helm available on `PATH`
+
 ## Configuration
 
 | Options                | Descriptions                                           | Required | type                            | Default  |
@@ -80,6 +86,7 @@ version: 1.2.3
 appVersion: 2.3.1
 ```
 
+
 New version - Case #1 patch
 
 ```yaml
@@ -103,4 +110,3 @@ New version - Case #3 major
 version: 2.0.0
 appVersion: 2.3.1
 ```
-

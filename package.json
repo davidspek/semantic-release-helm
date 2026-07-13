@@ -19,7 +19,14 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
     "prepare": "ts-patch install && typia patch"
+  },
+  "engines": {
+    "node": ">=20.8.1"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=24 <26"
   },
   "author": "JungHun Kim <mnthe@pubg.com>, pubg-devops-cicd-bot@pubg.com",
   "license": "MIT",
@@ -35,6 +42,7 @@
     "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.2",
+    "@types/semver": "^7.7.1",
     "semantic-release": "^24.0.0",
     "ts-node": "^10.9.2",
     "ts-patch": "^3.2.0",
