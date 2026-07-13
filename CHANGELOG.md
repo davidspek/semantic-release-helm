@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/pubg/semantic-release-helm/compare/v1.4.4...v1.5.0) (2026-07-13)
+
+
+### Features
+
+* support semantic-release 24 and 25 ([#2](https://github.com/pubg/semantic-release-helm/issues/2)) ([3465563](https://github.com/pubg/semantic-release-helm/commit/3465563b90de4fb9e373010444e463dcb032e2af))
+
 ## [1.4.4](https://github.com/pubg/semantic-release-helm/compare/v1.4.3...v1.4.4) (2024-06-10)
 
 
