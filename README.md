@@ -14,6 +14,12 @@ It supports the following protocols:
 npm install -D @davidspekorg/semantic-release-helm
 ```
 
+Runtime requirements:
+
+- Node.js `>=20.8.1`
+- semantic-release `>=24 <26`
+- Helm available on `PATH`
+
 ## Configuration
 
 | Options                | Descriptions                                           | Required | type                            | Default  |
@@ -79,6 +85,7 @@ Old version
 version: 1.2.3
 appVersion: 2.3.1
 ```
+
 
 New version - Case #1 patch
 

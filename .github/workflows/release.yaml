@@ -1,21 +1,46 @@
 name: Node.js CI
 
 on:
+  pull_request:
   push:
     branches:
       - main
 
 jobs:
-  build:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - node-version: '20.x'
+            semantic-release-version: '24'
+          - node-version: '24.x'
+            semantic-release-version: '25'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm install --no-save --package-lock=false semantic-release@${{ matrix.semantic-release-version }}
+      - run: npm run prepare
+      - run: npm test
+
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '24.x'
       - run: npm ci
-      - run: npm run build
+      - run: npm install --no-save --package-lock=false semantic-release@25
+      - run: npm run prepare
+      - run: npm test
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
