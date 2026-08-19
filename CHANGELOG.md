@@ -6,6 +6,7 @@
 * add helm dependency build before packaging ([44ca4f7](https://github.com/davidspek/semantic-release-helm/commit/44ca4f716d5490914eada2ad455c0e50578cb1ae))
 
 # [1.1.0](https://github.com/davidspek/semantic-release-helm/compare/v1.0.0...v1.1.0) (2024-11-25)
+# [1.5.0](https://github.com/pubg/semantic-release-helm/compare/v1.4.4...v1.5.0) (2026-07-13)
 
 
 ### Features
@@ -45,6 +46,7 @@
 * Refactor js to ts ([d58cc17](https://github.com/davidspek/semantic-release-helm/commit/d58cc1747e6781ffee6a1812c6479dfd9d07c4f0))
 * **semantic-release:** 플러그인 순서 변경 및 package.json 관리하도록 변경 ([803a705](https://github.com/davidspek/semantic-release-helm/commit/803a7054f20d09759c89950c26f12f84c64f0bb0))
 * Update helm release command to compatible 3.11 ([ccd513f](https://github.com/davidspek/semantic-release-helm/commit/ccd513f4c1b0101b9064e0c90152ce2a047a7e67))
+* support semantic-release 24 and 25 ([#2](https://github.com/pubg/semantic-release-helm/issues/2)) ([3465563](https://github.com/pubg/semantic-release-helm/commit/3465563b90de4fb9e373010444e463dcb032e2af))
 
 ## [1.4.4](https://github.com/pubg/semantic-release-helm/compare/v1.4.3...v1.4.4) (2024-06-10)
 
