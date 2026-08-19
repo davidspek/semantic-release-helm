@@ -43,10 +43,19 @@ jobs:
         with:
           node-version: '24.x'
       - run: npm ci
-      - run: npm install --no-save --package-lock=false semantic-release@25
       - run: npm run prepare
       - run: npm test
-      - run: npx semantic-release
+      - name: Semantic Release 🚀
+        id: semantic-release
+        uses: cycjimmy/semantic-release-action@b12c8f6015dc215fe37bc154d4ad456dd3833c90 # v6.0.0
+        with:
+          semantic_version: 25.0.9
+          extra_plugins: |
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator
+            @semantic-release/npm
+            @semantic-release/changelog
+            @semantic-release/github
+            @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FORCE_COLOR: "1"
