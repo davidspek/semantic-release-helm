@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/davidspek/semantic-release-helm/compare/v1.1.1...v1.2.0) (2026-08-20)
+
+
+### Bug Fixes
+
+* move to using github action for release ([efe20c0](https://github.com/davidspek/semantic-release-helm/commit/efe20c00a474c0190cf41436c1f8d7e4197e2212))
+
+
+### Features
+
+* support semantic-release 24 and 25 ([#2](https://github.com/davidspek/semantic-release-helm/issues/2)) ([3465563](https://github.com/davidspek/semantic-release-helm/commit/3465563b90de4fb9e373010444e463dcb032e2af))
+
 ## [1.1.1](https://github.com/davidspek/semantic-release-helm/compare/v1.1.0...v1.1.1) (2024-11-25)
 
 
